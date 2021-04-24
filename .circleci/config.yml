@@ -1,0 +1,11 @@
+version: 2.1
+orbs:
+   image-scanner: microsec/image-scanner@0.1.1
+
+workflows:
+ version: 2
+ workflow_name:
+   jobs:
+     - image-scanner/scan-image:
+         image_name: calico/node
+         auth_token: MICROSEC_AUTH_TOKEN
